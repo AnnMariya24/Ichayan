@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 25th Birthday, Ichayaaaaaa❤️</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;min-height:100%;font-family:Georgia,serif;background:#090609;color:#fff}
+body{overflow-x:hidden}
+.page{min-height:100vh;display:none;align-items:center;justify-content:center;padding:28px 18px;position:relative;overflow:hidden}
+.page.active{display:flex}
+.bg{position:absolute;inset:0;background:
+radial-gradient(circle at 20% 20%,rgba(255,70,120,.16),transparent 30%),
+radial-gradient(circle at 80% 80%,rgba(170,30,80,.12),transparent 35%),
+#090609}
+.content{position:relative;z-index:2;width:min(100%,430px);text-align:center}
+.heart{font-size:58px;animation:beat 1.4s infinite}
+@keyframes beat{50%{transform:scale(1.13)}}
+h1{font-size:clamp(30px,9vw,48px);line-height:1.1;margin:18px 0 12px}
+h2{font-size:30px;margin-bottom:12px}
+p{line-height:1.7;color:#e8dce2;font-size:16px}
+.sub{color:#bcaeb5;font-size:14px;margin-bottom:25px}
+select{width:100%;padding:16px 18px;border-radius:14px;border:1px solid #5f3042;background:#171017;color:white;font-size:16px;outline:none}
+.btn{margin-top:25px;padding:14px 24px;border:0;border-radius:999px;background:#d82f65;color:white;font-size:16px;cursor:pointer;box-shadow:0 10px 30px #0008}
+.hidden{display:none!important}
+.reveal{animation:fadeUp .9s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.quote{margin:24px 0;padding:20px;border-left:2px solid #e83f76;background:#ffffff08;border-radius:12px;font-style:italic}
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px 0}
+.photo{height:180px;border-radius:16px;overflow:hidden;background:#21151c;border:1px solid #402532}
+.photo img{width:100%;height:100%;object-fit:cover}
+.photo span{display:flex;height:100%;align-items:center;justify-content:center;color:#a9969f;font-size:13px;padding:10px}
+.timeline{text-align:left;margin:25px 0}
+.year{border-left:2px solid #d82f65;padding:0 0 22px 20px;margin-left:8px}
+.year b{color:#ff6d98;font-size:18px}
+.letter{text-align:left;background:#120c11;border:1px solid #39202c;border-radius:20px;padding:25px;line-height:1.8;margin:22px 0}
+.final{font-size:20px;line-height:1.7}
+.confetti{position:absolute;inset:0;pointer-events:none}
+.dot{position:absolute;width:7px;height:7px;border-radius:50%;background:#ff4d87;animation:fall 4s linear forwards}
+@keyframes fall{from{transform:translateY(-20px) rotate(0);opacity:1}to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+.note{font-size:12px;color:#8f8088;margin-top:20px}
+
+.memory-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:24px 0}
+.memory-box{height:115px;border:1px solid #542638;border-radius:18px;background:linear-gradient(145deg,#21101a,#120a10);color:#ff6d98;font-size:36px;cursor:pointer;box-shadow:0 8px 25px #0006;transition:.25s}
+.memory-box:active{transform:scale(.94)}
+.memory-box small{display:block;font-size:12px;color:#a9969f;margin-top:5px}
+.modal{position:fixed;inset:0;background:#000c;z-index:20;display:flex;align-items:center;justify-content:center;padding:20px}
+.modal-card{position:relative;width:min(100%,390px);background:#160d13;border:1px solid #542638;border-radius:20px;padding:14px;box-shadow:0 20px 60px #000}
+.modal-card img{width:100%;height:390px;object-fit:cover;border-radius:14px;background:#24151d}
+.modal-card p{padding:14px 5px 4px;color:#eadde3}
+.close{position:absolute;right:12px;top:10px;width:34px;height:34px;border:0;border-radius:50%;background:#000b;color:#fff;font-size:24px;z-index:2;cursor:pointer}
+</style>
+</head>
+<body>
+
+<section id="q" class="page active">
+ <div class="bg"></div>
+ <div class="content reveal">
+   <div class="heart">❤️</div>
+   <h1>Do you love me?</h1>
+   <p class="sub">Before all… answer honestly. 🥺</p>
+   <select id="answer">
+     <option value="">Choose one...</option>
+     <option>Yes ❤️</option>
+     <option>No 🙄</option
+     <option>No 😏</option>
+   </select>
+   <button class="btn hidden" id="openBtn">Good boy ❤️</button>
+   <p id="noAccess" class="hidden" style="margin-top:18px;color:#ff6d98;font-size:15px;">
+     🔒 No access 😌<br><span style="color:#bcaeb5;font-size:13px;">Apo enne ishtallaleee…Maryadak yes edutho. ❤️</span>
+   </p>
+ </div>
+</section>
+
+<section id="birthday" class="page">
+ <div class="bg"></div><div id="confetti" class="confetti"></div>
+ <div class="content reveal">
+   <div class="heart">🎂</div>
+   <h1>Happy Birthday,<br>Maaathuuseeeeee ❤️</h1>
+   <p>25 years of you.<br>6 beautiful years of us.<br>And our story is still moving… ♾️</p>
+   <div class="quote">“For I know the plans I have for you,” declares the Lord, “plans to prosper you and not to harm you, plans to give you hope and a future.”
+— Jeremiah 29:11 🤍
+</div>
+   <div class="photos">
+  <div class="photo">
+    <img src="photos/images/photo2.jpg" alt="Our memory">
+  </div>
+
+  <div class="photo">
+    <img src="photos/images/photo3.jpg" alt="Our memory">
+  </div>
+
+  <div class="photo">
+    <img src="photos/images/photo4.jpg" alt="Our memory">
+  </div>
+
+  <div class="photo">
+    <img src="photos/images/photo5.jpg" alt="Our memory">
+  </div>
+   </div>
+   <button class="btn" onclick="showPage('surprise')">Our Future🎁</button>
+ </div>
+</section>
+
+<section id="surprise" class="page">
+ <div class="bg"></div>
+ <div class="content reveal">
+   <div class="heart">🎁</div>
+   <h2>Chumma eduth nok ellam😂❤️</h2>
+   <p class="sub">Tap each box to reveal something</p>
+  
+
+   <div class="memory-grid">
+     <button class="memory-box" onclick="openMemory(1)">🎁<small>01</small></button>
+     <button class="memory-box" onclick="openMemory(2)">🎁<small>02</small></button>
+     <button class="memory-box" onclick="openMemory(3)">🎁<small>03</small></button>
+     <button class="memory-box" onclick="openMemory(4)">🎁<small>04</small></button>
+     <button class="memory-box" onclick="openMemory(5)">🎁<small>05</small></button>
+     <button class="memory-box" onclick="openMemory(6)">🎁<small>06</small></button>
+     <button class="memory-box" onclick="openMemory(7)">🎁<small>07</small></button>
+     <button class="memory-box" onclick="openMemory(8)">🎁<small>08</small></button>
+     <button class="memory-box" onclick="openMemory(9)">🎁<small>09</small></button>
+     <button class="memory-box" onclick="openMemory(10)">🎁<small>10</small></button>
+   </div>
+
+   <div id="memoryModal" class="modal hidden" onclick="closeMemory(event)">
+     <div class="modal-card" onclick="event.stopPropagation()">
+       <button class="close" onclick="closeMemory()">×</button>
+       <img id="memoryImage" src="" alt="Our memory">
+       <p id="memoryCaption"></p>
+     </div>
+   </div>
+
+   <button class="btn" onclick="showPage('letter')">Continue to my letter 💌</button>
+ </div>
+</section>
+
+<section id="letter" class="page">
+ <div class="bg"></div>
+ <div class="content reveal">
+   <div class="heart">💌</div>
+   <h2>Ente Ichayanu</h2>
+   <div class="letter">
+    Manapoorvam vazhak koodi irunne aann oke manasilayeettonnee…Enthelum vende ente chekkanu ennod porukuthan<br><br>
+
+Eda ichayaaa, enna porukuthiyalum enik ninne othiri ishtatonne.. Njn ee vazhak koodiyath oke ente ichayan nalla koch aavana.. Alland enik oru deshyom illaaaa…<br><br>
+
+Ichayaaa happy ayit irikanattonnee…Life enthavunn orth tension onnum adikenda.. Tension adipikunne njn allenne…Athinu sorry…Payye aayalum set aaya mathy.. Njn wait cheytholattooo.. Etgra naal venelum…<br><br>
+
+Ichayanu rakshapedan olla ella kazhivum omd.. Engane samsarikanam ennariyam.. Ennekaal velivum omd oro karyangalod…athoke mathynne ee lokath jeevikan…<br><br>
+
+Pinneee…valya joli onnum enk vendi vanganda.. Athorth tension adikenda…Ichayanu enthano ishtam ath mathyttonneeee…. Cheyyunna namak satisfaction illel enth cheythitum karyam ondo…<br><br>
+
+( ingane oke mimdan enik idaka bodham varu.
+Sorry.. Enne ariyaloo)<br><br>
+
+Anyway…Happy 25 th birthday …kettprayam aayi ente chekkanu…. Ponnu ondattonne.. Enne marann vere kettiyekallu kettooo….<br><br><br>
+
+Love you so much <br><br>Ummmmmmmmmmmaahhh Ummmmmmmmmmmaahhh Ummmmmmmmmmmaahhh ❤️
+
+
+
+</strong>
+   </div>
+   <button class="btn" onclick="showPage('final')">One more surprise 🎁</button>
+ </div>
+</section>
+
+<section id="final" class="page">
+ <div class="bg"></div><div id="confetti2" class="confetti"></div>
+ <div class="content reveal">
+   <div class="heart">🎁</div>
+   <h1>For You, Ichayaaa❤️</h1>
+   <p class="final">6 years completed.<br>A lifetime still waiting to be written.</p>
+   <div class="quote">“I thank God for the day He brought you into this world, because your birth became one of the most beautiful blessings in mine. Among all the plans He had written, I’m grateful that our paths were meant to meet. Happy Birthday, my love. 🤍”<br><br>
+
+“Every good and perfect gift is from above.” <br>— James 1:17
+</div>
+   <h2>Happy Birthday Ichayoooo 🥹❤️</h2>
+   <p>Love you so so much...Enne ittech pokalluttonne....Ennum ente ketyonayit ente koode venatto<br>
+   Kettypidich chakkara Ummmmmmmmmmmmmmmmmmmmaaaaaaaaaaaaaaahhhhhhhhh ummmmmmmmmmmmmmmmmmaaaaaaaaaaaaaaaaaaahhhhhhh ummmmmmmmmmmmmmmmmmmnnaaaaaaaahhhhhhggg
+   </p>
+   <p class="note">Snehathode ichayante ponnuttyyy...🥰🥰♾️</p>
+ </div>
+</section>
+
+<script>
+const answer=document.getElementById('answer');
+const btn=document.getElementById('openBtn');
+const noAccess=document.getElementById('noAccess');
+
+answer.addEventListener('change',()=>{
+  const value=answer.value;
+  btn.classList.toggle('hidden', value!=='Yes ❤️');
+  noAccess.classList.toggle('hidden', value!=='No 🙄' && value!=='No 😏');
+});
+btn.addEventListener('click',()=>showPage('birthday'));
+
+const memories = {
+  1:{img:'photos/surprise/memory1.jpg',text:'01 ❤️'},
+  2:{img:'photos/surprise/memory2.jpg',text:'02 ❤️'},
+  3:{img:'photos/surprise/memory3.jpg',text:'03 ❤️'},
+  4:{img:'photos/surprise/memory4.jpg',text:'04 ❤️'},
+  5:{img:'photos/surprise/memory5.jpg',text:'05 ❤️'},
+  6:{img:'photos/surprise/memory6.jpg',text:'06 ❤️'},
+  7:{img:'photos/surprise/memory7.jpg',text:'07 ❤️'},
+  8:{img:'photos/surprise/memory8.jpg',text:'08 ❤️'},
+  9:{img:'photos/surprise/memory9.jpg',text:'09 ❤️'},
+  10:{img:'photos/surprise/memory10.jpg',text:'10 ❤️'}
+};
+function openMemory(n){
+  document.getElementById('memoryImage').src=memories[n].img;
+  document.getElementById('memoryCaption').textContent=memories[n].text;
+  document.getElementById('memoryModal').classList.remove('hidden');
+}
+function closeMemory(e){
+  if(e && e.target && e.target.id!=='memoryModal') return;
+  document.getElementById('memoryModal').classList.add('hidden');
+}
+
+function showPage(id){
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+ window.scrollTo(0,0);
+ if(id==='birthday')makeConfetti('confetti');
+ if(id==='final')makeConfetti('confetti2');
+}
+function makeConfetti(id){
+ const box=document.getElementById(id);
+ box.innerHTML='';
+ for(let i=0;i<45;i++){
+  const d=document.createElement('i');
+  d.className='dot';
+  d.style.left=Math.random()*100+'%';
+  d.style.animationDelay=Math.random()*1.8+'s';
+  d.style.opacity=.5+Math.random()*.5;
+  box.appendChild(d);
+ }
+}
+</script>
+</body>
+</html>
